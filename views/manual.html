@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+
+        <header><h1>Úvodná inštruktáž (Reproduktory)</h1></header>
+
+        <p id="action-message">Pre uskutočnenie merania budete potrebovať dve zariadenia!<br />
+            <br /> </p>
+        <p id="action-message">1.krok: Nastavte hlasitosť zariadenia so spustenou aplikáciou pre rečovú audiometriu na maximum (približne 60dB). </p>
+        <p id="action-message">2.krok: Umiestnite zariadenie so spustenou aplikáciou na meranie hlasitosti k uchu dieťaťa.</p>
+        <p id="action-message">3.krok: Pri prehraní zvuku sledujte hlasitosť v decibeloch nameranú zariadením. </p>
+        <p id="action-message">4.krok: Zapíšte nameranú hodnotu do formulára na nasledujúcej strane.<br />
+            <br />  </p>
+
+        <button class='play-btn' id="playbtn" href="#"></button>
+
+       <!------ <button type="button2" class="button2" value="Pokračovať" onclick="location.href = 'login.html'" >Pokračovať</button> -->
+
+        <div id="outer">
+
+            <div class="inner" id="inner1">
+                    <a href="#" id="vyberkola" onclick="document.location=this.id+'.html';return false; " >
+                        <img src="images/back.png" alt="" width="100" height="100">
+                    </a>
+            </div>
+
+            <div class="inner">
+                <a href="#" id="index" onclick="confirmation(); " >
+                    <img src="images/home.png" alt="" width="100" height="100">
+                </a>
+            </div>
+
+            <div class="inner">
+                <a href="#" id="pribeh" onclick="document.location=this.id+'.html';return false; " >
+                    <img src="images/forward.png" alt="" width="100" height="100">
+                </a>
+            </div>
+
+        </div>
+
+
+
+        <script src="manual.js" charset="utf-8"></script>
+
+
+    </body>
+</html>

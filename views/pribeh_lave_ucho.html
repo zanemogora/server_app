@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+
+        <header><h1>Príbeh robota Tomáša</h1></header>
+
+
+
+        <p id="action-message">Volám sa robot Tomáš. Prednedávnom som sa začal učiť tvoj jazyk a stala sa mi nemilá vec. Dlho som si robil zbierku obrázkov a zvukov, ktoré k sebe patria a starostlivo som si ich ukladal.<br />
+            <br /> </p>
+        <p id="action-message">Bohužiaľ dnes som si všimol, že môj zoznam niekto poprehadzoval. Bol by som rád, ak by si mi pomohol priradiť nasledujúce obrázky k správnemu zvuku. </p>
+
+        <div class="nextbutton">
+            <div class="nextbutton2" id="nextbutton3">
+                <a href="#" id="manual1_lave_ucho" onclick="document.location=this.id+'.html';return false;" >
+                    <img src="images/oh.gif" alt="nextbutton3" width="400" height="500" class="nextbutton" />
+                </a>
+            </div>
+
+        <p id="action-message">Za každý správne priradený obrázok k zvuku ti prirátam 1 bod. </p>
+        <p id="action-message">Veľa šťastia a vyberaj pozorne! </p>
+
+        <div id="outer">
+
+            <div class="inner" id="inner1">
+                    <a href="#" id="manual_lave_ucho" onclick="document.location=this.id+'.html';return false; " >
+                        <img src="images/back.png" alt="" width="100" height="100">
+                    </a>
+            </div>
+
+            <div class="inner">
+                <a href="#" id="index" onclick="confirmation(); " >
+                    <img src="images/home.png" alt="" width="100" height="100">
+                </a>
+            </div>
+
+            <div class="inner">
+                <a href="#" id="manual1_lave_ucho" onclick="document.location=this.id+'.html';return false; " >
+                    <img src="images/forward.png" alt="" width="100" height="100">
+                </a>
+            </div>
+
+        </div>
+
+        <script src="pribeh_lave_ucho.js" charset="utf-8"></script>
+
+
+    </body>
+</html>

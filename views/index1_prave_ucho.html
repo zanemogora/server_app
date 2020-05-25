@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header><h1>Aplikácia pre rečovú audiometriu (1.kolo)</h1></header>
+        
+        <div id="progressbar">
+            <div></div>
+        </div>
+
+        <div class="score-board">
+                <div id="correct-label" class="badge">správne</div>
+                <div id="wrong-label" class="badge2">nesprávne</div>
+                <span id="correct-score">0</span>:<span id="wrong-score">0</span>
+        </div>
+    
+
+        <button class='play-btn' id="playbtn" href="#" onclick="clickcounter();"></button> 
+        <!--------
+        <div class="result">
+            <p>Vitajte v 1.kole!</p>
+        </div>
+        ---->
+
+
+
+
+
+
+
+
+        
+        <div class="choices">
+            <div class="choice" id="cervene_auto">
+                <a href="#" id="index2_prave_ucho" onclick="document.location=this.id+'.html';return false; " >
+                    <img src="images/28_cervene_auto.jpg" alt="" width="300" height="400" >
+                </a>
+            </div>
+            
+            <div class="choice" id="cervena">
+                <a href="#" id="index2_prave_ucho" onclick="document.location=this.id+'.html';return false; " >        
+                    <img src="images/6_cervena.jpg" alt="" width="300" height="400" >
+                </a>
+            </div>
+
+            <div class="choice" id="jablko_jablcko">
+                <a href="#" id="index2_prave_ucho" onclick="document.location=this.id+'.html';return false; " >        
+                    <img src="images/46_jablko_jablcko.jpg" alt="" width="300" height="400" >
+                </a>
+            </div>
+
+            <div class="choice" id="kvet_kvietok">
+                <a href="#" id="index2_prave_ucho" onclick="document.location=this.id+'.html';return false; " >        
+                    <img src="images/37_kvet_kvietok.jpg" alt="" width="300" height="400" >
+                </a>
+            </div>
+
+        </div>
+
+
+        <div id="outer">
+            
+                <div class="inner">
+                        <a href="#" id="manual1_prave_ucho" onclick="document.location=this.id+'.html';return false;" >
+                            <img src="images/back.png" alt="" width="100" height="100">
+                        </a>            
+                </div>
+    
+                <div class="inner">
+                        <a href="#" id="index" onclick="confirmation(); " >
+                            <img src="images/home.png" alt="" width="100" height="100">
+                        </a>
+                </div>
+    
+            </div>
+            
+        <p id="action-message">Nápoveda: Stlačte tlačidlo prehrávania zvuku a kliknutím vyberte obrázok prislúchajúci ku prehranému zvuku.</p>   
+        
+
+
+
+
+        
+
+
+
+
+
+
+        <!-----<div class="playbutton">
+            <div class="playbutton2" id="playbutton3">
+                    <img src="images/playbutton.gif" alt="">
+            </div>
+        </div>
+        --->
+
+        <!---<p id="action-message2">Stlačením prejdite na 2.kolo</p>--->
+
+        <!----------
+        <div class="nextbutton">
+                <div class="nextbutton2" id="nextbutton3">
+                    <a href="#" id="index2" onclick="document.location=this.id+'.html';return false;" >
+                        <img src="images/nextbutton.gif" alt="nextbutton3" class="nextbutton"/>
+                    </a>
+                </div>
+        </div>
+        ------>
+
+        <script src="app_prave_ucho.js" charset="utf-8"></script>
+
+    </body>
+</html>

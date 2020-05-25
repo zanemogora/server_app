@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+        
+        <header><h1>Inštruktáž (3.kolo)</h1></header>
+
+        <p id="action-message">Pred 3.kolom hry znížte hlasitosť na 40db (ďalšie 3 kliknutia na tlačidlo zníženia hlasitosti na mobilnom telefóne). </p>
+
+        <button class='play-btn' id="playbtn" href="#"></button> 
+
+        <div id="outer">
+            
+            <div class="inner">
+                    <a href="#" id="indexvysledky2kolo_lave_ucho" onclick="document.location=this.id+'.html';return false; " >
+                        <img src="images/back.png" alt="" width="100" height="100">
+                    </a>            
+            </div>
+
+            <div class="inner">
+                    <a href="#" id="index" onclick="confirmation(); " >
+                        <img src="images/home.png" alt="" width="100" height="100">
+                    </a>
+            </div>
+
+            <div class="inner">
+                    <a href="#" id="index11_lave_ucho" onclick="document.location=this.id+'.html';return false; " >
+                        <img src="images/forward.png" alt="" width="100" height="100">
+                    </a>
+            </div>
+
+        </div>
+
+        <script src="manual2_lave_ucho.js" charset="utf-8"></script>
+ 
+
+    </body>
+</html>
