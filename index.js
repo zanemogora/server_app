@@ -61,8 +61,9 @@ function registerUser(name, age, sex, test, score) {
 //DB.close();
 
 app.get('/', function(req, res){
-
-  res.sendFile('C:/Users/Lukáš Hudák/Desktop/serverova appka 24.5.2020/nodekb/views/index.html');
+  
+    res.redirect('/views/index.html');
+  //res.sendFile('C:/Users/Lukáš Hudák/Desktop/serverova appka 24.5.2020/nodekb/views/index.html');
 });
 
 
