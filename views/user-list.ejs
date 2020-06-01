@@ -14,23 +14,6 @@
     background-size: cover;
   }
 
-  #outer
-  {
-      width:100%;
-        bottom: 0;
-        left: 0;
-      text-align: center;
-      margin-left: -50px
-
-
-  }
-  .inner
-  {
-      display: inline-block;
-      margin-left: 100px
-
-  }
-
   table {
   border-collapse: collapse;
   width: 100%;
@@ -59,6 +42,21 @@
         top: -30;
         left: 0;
   }
+    
+  #outer
+  {
+    width:100%;
+    text-align: center;
+    margin-left: -50px
+
+
+  }
+  .inner
+  {
+    display: inline-block;
+    margin-left: 100px
+
+  }    
 
     </style>
 
@@ -73,6 +71,9 @@
             <th>Pohlavie</th>
             <th>Typ testu</th>
             <th>Správne odpovede</th>
+            <th>Diagnostika</th>
+            <th>Pristroj</th>
+
         <!---    <th>Edit</th>
             <th>Delete</th>  --->
         </tr>
@@ -89,6 +90,8 @@
             <td><%=data.sex %></td>
             <td><%=data.test %></td>
             <td><%=data.score %></td>
+            <td><%=data.diagnostic%></td>
+            <td><%=data.gadget %></td>
 
           <!---  <td><a href="/edit/<%=data.id%>">Edit</a></td>
             <td><a href="/user/<%=data.id%>">Delete</a></td> --->

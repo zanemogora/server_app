@@ -140,22 +140,22 @@
 <body>
 
     <form action="/" method="POST">
-      <div><label for="meno">Napíšte svoje meno:</label>
+      <div><label for="meno">Napíšte svoje meno:</label></div> 
 
         <div><input type="text" name="meno" placeholder="Meno" value="" required maxlength="20"/></div>
 
-        <div><label for="meno">Napíšte svoj vek:</label>
+        <div><label for="meno">Napíšte svoj vek:</label></div> 
 
         <div><input type="number" name="vek" placeholder="Vek" value="" required min="1" max="125"></div>
 
-        <div><label for="pohlavie" type="text" name="pohlavie" placeholder="Pohlavie" value="" required>Vyberte svoje pohlavie:</label>
+        <div><label for="pohlavie" type="text" name="pohlavie" placeholder="Pohlavie" value="" required>Vyberte svoje pohlavie:</label></div> 
 
         <select name="pohlavie" id="pohlavie">
           <option>Muž</option>
           <option>Žena</option>
         </select>
 
-        <div><label for="testy" type="text" name="testy" placeholder="Typ testu" value="" required>Vyberte typ testu:</label>
+        <div><label for="testy" type="text" name="testy" placeholder="Typ testu" value="" required>Vyberte typ testu:</label></div> 
 
         <select name="testy" id="testy">
           <option>Reproduktory</option>
@@ -163,10 +163,22 @@
           <option>Pravé ucho</option>
         </select>
 
-        <div><label for="meno">Uveďte celkový počet správnych odpovedí:</label>
+        <div><label for="meno">Uveďte celkový počet správnych odpovedí:</label></div> 
 
         <div><input type="number" name="skore" placeholder="Skóre" value="" required min="0" max="25"></div><br/>
 
+        <div><label for="diagnostika">Máte diagnostikovanú poruchu sluchu ? (Ak áno, koľko % poškodenie ?)</label></div> 
+
+        <div><input type="text" name="diagnostika" placeholder="Diagnostika" value="" required maxlength="20"/></div>  
+          
+        <div><label for="pristroj" type="text" name="pristroj" placeholder="Pristroj" value="" required>Používate naslúchací prístroj ?</label></div> 
+
+        <select name="pristroj" id="pristroj">
+          <option>Áno</option>
+          <option>Nie</option>
+        </select>
+
+      
         <button type="submit">Odoslať údaje do databázy</button>
       </form>
 

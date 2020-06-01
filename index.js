@@ -4,27 +4,9 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var upload = multer();
 var app = express();
-
 const sqlite3 = require('sqlite3').verbose();
 const DB_PATH = './NodejsSQL/sqlite.db';
-
-
-
 var bodyParser = require('body-parser');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //starting database
@@ -52,7 +34,10 @@ dbSchema = `CREATE TABLE IF NOT EXISTS Pouzivatelia (
         age integer NOT NULL,
         sex text NOT NULL,
         test text NOT NULL,
-        score integer NOT NULL
+        score integer NOT NULL,
+        diagnostic text NOT NULL,
+        gadget text NOT NULL
+
     );`
 
 DB.exec(dbSchema, function(err){
@@ -62,11 +47,11 @@ DB.exec(dbSchema, function(err){
 });
 
 //ulozenie udajov o uzivatelovi do databazy
-function registerUser(name, age, sex, test, score) {
-    var sql= "INSERT INTO Pouzivatelia (name, age, sex, test, score) "
-    sql += "VALUES (?, ?, ?, ?, ?) "
+function registerUser(name, age, sex, test, score, diagnostic, gadget) {
+    var sql= "INSERT INTO Pouzivatelia (name, age, sex, test, score, diagnostic, gadget) "
+    sql += "VALUES (?, ?, ?, ?, ?, ?, ?) "
 
-    DB.run(sql, [name, age, sex, test, score], function(error) {
+    DB.run(sql, [name, age, sex, test, score, diagnostic, gadget], function(error) {
         if (error) {
             console.log(error)
         } else {
@@ -76,23 +61,13 @@ function registerUser(name, age, sex, test, score) {
     });
 };
 
-//DB.close();
-/*
-app.get('/', function(req, res){
-  res.sendFile('views/index.html');
 
-  //res.redirect('/views/index.html');
-  //res.sendFile('C:/Users/Lukáš Hudák/Desktop/serverova appka 24.5.2020/nodekb/views/index.html');
-});
-
-
-app.use(express.static('/views'));
-*/
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/views'));
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -100,21 +75,14 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
-
 app.get('/', function(req, res){
     res.render('index.html');
 });
 
 
-
-
-
-
-
-
 app.post('/', function (req, res){
 
-  registerUser(req.body.meno, req.body.vek, req.body.pohlavie, req.body.testy, req.body.skore);
+  registerUser(req.body.meno, req.body.vek, req.body.pohlavie, req.body.testy, req.body.skore, req.body.diagnostika, req.body.pristroj );
 
   var sql='SELECT * FROM Pouzivatelia';
   DB.all(sql, function (err, data, fields) {
